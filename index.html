@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelftest: Digitaal & AI-traject</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Custom kleuren gebaseerd op de Sint-Rembert huisstijl uit de screenshot
+                        rblue: {
+                            DEFAULT: '#0B138A', // Basis donkerblauw
+                            light: '#1E28AF',   // Iets lichter blauw voor hovers
+                            dark: '#070C5C',    // Zeer donkerblauw
+                        },
+                        rgreen: {
+                            DEFAULT: '#AFFF00', // Fel/Neon groen accent
+                            hover: '#9DE600'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Custom scrollbar voor de sidebar */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .print-area { margin: 0 !important; width: 100% !important; }
+            body { background: white; color: black; }
+        }
+    </style>
+</head>
+<body class="bg-rblue flex h-screen overflow-hidden text-slate-800">
+
+    <aside class="w-72 bg-rblue text-white hidden md:flex flex-col h-full border-r border-white/10 flex-shrink-0 z-20 no-print">
+        <div class="p-6">
+            <span class="bg-rgreen text-rblue-dark font-black text-[10px] tracking-widest px-2.5 py-1 rounded uppercase">Sint-Rembert</span>
+            <h1 class="font-black text-2xl mt-4 leading-tight uppercase">
+                DIGITALE<br>
+                <span class="text-rgreen">ZELFTEST</span>
+            </h1>
+            <p class="text-white/60 text-xs mt-2">Scholengroep Sint-Rembert &bull; Professionalisering</p>
+        </div>
+
+        <div class="px-6 mb-4">
+            <div class="flex justify-between text-xs font-bold text-rgreen mb-2 uppercase tracking-wider">
+                <span>Voortgang</span>
+                <span id="sidebar-progress-text">0%</span>
+            </div>
+            <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                <div id="sidebar-progress-bar" class="bg-rgreen h-full transition-all duration-500" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto custom-scrollbar px-4 py-2">
+            <div class="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-3 px-2">Menu & Domeinen</div>
+            <nav id="sidebar-nav" class="space-y-1">
+                <div class="nav-item active flex items-center space-x-3 px-3 py-2.5 rounded-lg bg-white/10 cursor-default" data-step="0">
+                    <div class="w-6 h-6 rounded flex items-center justify-center bg-rblue-light">
+                        <i class="fa-solid fa-house text-xs"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold">Startpagina</div>
+                        <div class="text-[10px] text-white/50">Visie & Uitleg</div>
+                    </div>
+                </div>
+                </nav>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-full overflow-y-auto bg-white print-area relative">
+        
+        <div id="hero-section" class="bg-rblue text-white px-6 py-10 md:px-12 md:py-16 transition-all duration-500 shrink-0">
+            
+            <div id="hero-welcome">
+                <div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] md:text-xs tracking-widest px-3 py-1 rounded-sm uppercase mb-6">
+                    Scholengroep Sint-Rembert × DigCompEdu × AI
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-6">
+                    WELK <span class="text-rgreen">DIGITAAL</span><br>
+                    TRAJECT PAST BIJ JOU?
+                </h1>
+                <p class="text-white/80 max-w-2xl text-sm md:text-base leading-relaxed mb-10">
+                    Om je zo goed mogelijk te ondersteunen in je digitale en didactische groei, hebben we gerichte professionaliseringsmodules uitgewerkt. Vul deze korte zelftest in en krijg meteen een gepersonaliseerd advies over welke modules het best bij jou passen.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1">6</div>
+                        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Domeinen</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1">~3</div>
+                        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Minuten tijd</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Op Maat</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Direct Advies</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hero-compact" class="hidden">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-lg bg-rblue-light flex items-center justify-center text-rgreen text-xl font-black border border-white/10" id="header-step-number">1</div>
+                    <div>
+                        <div class="text-rgreen font-bold text-[10px] tracking-widest uppercase" id="header-domain-badge">Domein 1</div>
+                        <h2 class="text-2xl font-bold text-white" id="header-domain-title">Titel Domein</h2>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="flex-1 bg-white px-6 py-10 md:px-12 md:py-12">
+            <div class="max-w-4xl mx-auto">
+
+                <div id="step-0" class="space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-black text-rblue uppercase tracking-tight">ONZE <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">VISIE</span> OP DIGITALISERING</h2>
+                        <p class="text-slate-500 mt-2 text-sm">Waarom investeren we in digitale geletterdheid voor elk personeelslid?</p>
+                    </div>
+
+                    <div class="bg-slate-50 border-l-4 border-rblue p-6 rounded-r-xl">
+                        <h3 class="font-bold text-rblue flex items-center space-x-2 mb-2">
+                            <i class="fa-solid fa-bullseye text-rgreen text-lg bg-rblue rounded-full w-6 h-6 flex items-center justify-center"></i>
+                            <span>WAT WILLEN WIJ BEREIKEN?</span>
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sint-Rembert gelooft in <strong>technologie als een kans</strong>, niet als een extra last. We willen dat elke leerkracht — onafhankelijk van niveau of vak — zich <strong>zelfzeker en verantwoord</strong> voelt om tools in te zetten. Het uiteindelijke doel is om de leerkracht te <strong>versterken</strong>: meer tijd voor de leerling, minder administratieve last, en betere didactische werkvormen en differentiatie.
+                        </p>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="nextStep()" class="bg-rgreen hover:bg-rgreen-hover text-rblue-dark font-black px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 flex items-center space-x-3 uppercase tracking-wider text-sm">
+                            <span>Start de Zelftest</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="question-wizard" class="hidden space-y-10">
+                    
+                    <div class="space-y-4">
+                        <label class="flex items-center text-lg font-bold text-rblue">
+                            <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">1</span> 
+                            Hoe beoordeel je je huidige niveau of aanpak?
+                        </label>
+                        <div id="level-options" class="grid grid-cols-1 gap-3 ml-11">
+                            </div>
+                    </div>
+
+                    <div class="space-y-5 pt-6 border-t border-slate-100">
+                        <label class="flex items-center text-lg font-bold text-rblue">
+                            <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">2</span> 
+                            Hoe belangrijk is het voor jou om je hierin bij te scholen?
+                        </label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
+                            <button type="button" onclick="setBelang(1)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="1">
+                                <span class="text-3xl font-black text-slate-300 group-hover:text-rblue transition-colors">1</span>
+                                <span class="text-[10px] text-slate-400 font-bold uppercase mt-2">Helemaal niet</span>
+                            </button>
+                            <button type="button" onclick="setBelang(2)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="2">
+                                <span class="text-3xl font-black text-slate-400 group-hover:text-rblue transition-colors">2</span>
+                                <span class="text-[10px] text-slate-500 font-bold uppercase mt-2">Eerder niet</span>
+                            </button>
+                            <button type="button" onclick="setBelang(3)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="3">
+                                <span class="text-3xl font-black text-slate-600 group-hover:text-rblue transition-colors">3</span>
+                                <span class="text-[10px] text-slate-700 font-bold uppercase mt-2">Belangrijk</span>
+                            </button>
+                            <button type="button" onclick="setBelang(4)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="4">
+                                <span class="text-3xl font-black text-slate-800 group-hover:text-rblue transition-colors">4</span>
+                                <span class="text-[10px] text-rblue font-black uppercase mt-2">Zeer belangrijk</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-8 ml-11 no-print">
+                        <button onclick="prevStep()" class="text-slate-400 hover:text-rblue font-bold text-sm uppercase tracking-wider flex items-center space-x-2 transition-colors">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Vorige</span>
+                        </button>
+                        <button id="next-btn" onclick="processNext()" class="bg-rblue hover:bg-rblue-light text-white font-bold text-sm uppercase tracking-wider py-3 px-8 rounded-xl shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">
+                            <span>Volgende</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results-screen" class="hidden space-y-10">
+                    <div class="text-center md:text-left space-y-2 border-b border-slate-200 pb-6">
+                        <h2 class="text-3xl font-black text-rblue uppercase tracking-tight">JOUW <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">ADVIES</span> OP MAAT</h2>
+                        <p class="text-slate-500 text-sm no-print">Dit advies is berekend op basis van jouw huidige niveau en prioriteiten.</p>
+                    </div>
+
+                    <div id="wrapper-beginners" class="space-y-4">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-seedling"></i></span>
+                            <span>Aanbevolen: Beginners</span>
+                        </h3>
+                        <div id="container-beginners" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    </div>
+
+                    <div id="wrapper-gevorderden" class="space-y-4 pt-4">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-rocket"></i></span>
+                            <span>Aanbevolen: Gevorderden</span>
+                        </h3>
+                        <div id="container-gevorderden" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    </div>
+
+                    <div id="wrapper-grafiek" class="space-y-4 pt-6 border-t border-slate-100">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-chart-line"></i></span>
+                            <span>Jouw Digitale Profiel op Elk Niveau</span>
+                        </h3>
+                        <p class="text-slate-500 text-sm max-w-xl">Deze grafiek toont je prestaties per domein op basis van de zelftest. Een score van 1 betekent dat je de fundamenten nog aan het verstevigen bent, een score van 2 dat je de basis beheerst, en een score van 3 dat je gevorderd bent.</p>
+                        <div id="container-grafiek" class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                            </div>
+                    </div>
+
+                    <div id="no-modules-notice" class="hidden p-8 text-center bg-slate-50 rounded-2xl border border-slate-200">
+                        <i class="fa-solid fa-circle-check text-4xl text-slate-300 mb-3"></i>
+                        <h3 class="text-lg font-bold text-rblue">Alles lijkt in orde!</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Op basis van je antwoorden zijn er momenteel geen specifieke modules geselecteerd. Neem gerust contact op met de ICT-coördinator voor maatwerk.</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-slate-100 no-print">
+                        <button onclick="window.print()" class="flex-1 bg-rblue hover:bg-rblue-light text-white font-bold py-4 px-6 rounded-xl shadow-md transition uppercase tracking-wider text-xs text-center flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-print"></i>
+                            <span>Sla op als PDF / Print</span>
+                        </button>
+                        <button onclick="restartSurvey()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-4 px-6 rounded-xl transition uppercase tracking-wider text-xs text-center flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Test opnieuw invullen</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const domains = [
+            { id: 1, name: "Professionele betrokkenheid & Organisatie", icon: "fa-folder-tree", options: [ { key: "A", text: "Ik zoek nog mijn weg in het efficiënt gebruiken van Teams, OneDrive en Outlook.", points: 1 }, { key: "B", text: "Ik ken de basis, maar werk nog niet altijd even gestructureerd.", points: 2 }, { key: "C", text: "Ik heb een logische mappenstructuur, deel vlot documenten en werk efficiënt samen.", points: 3 } ] },
+            { id: 2, name: "Digitale bronnen & Lesmateriaal", icon: "fa-file-lines", options: [ { key: "A", text: "Ik gebruik voornamelijk standaardmateriaal (Word/PDF) of heel basic presentaties.", points: 1 }, { key: "B", text: "Ik maak eenvoudige presentaties in bv. PowerPoint of the basis van Canva.", points: 2 }, { key: "C", text: "Ik ontwerp zelf visueel sterke, interactieve lessen met geavanceerde tools of didactische sjablonen.", points: 3 } ] },
+            { id: 3, name: "Lesgeven en leren", icon: "fa-chalkboard-user", options: [ { key: "A", text: "Ik gebruik het digibord vooral om te projecteren; de leerlingen werken meestal analoog.", points: 1 }, { key: "B", text: "Ik voeg af en toe een interactief element toe (bv. een simpele Kahoot) om de les te breken.", points: 2 }, { key: "C", text: "Ik zet doelbewust en gevarieerd interactieve werkvormen in om alle leerlingen actief te betrekken.", points: 3 } ] },
+            { id: 4, name: "Evalueren", icon: "fa-clipboard-check", options: [ { key: "A", text: "Ik toets voornamelijk op papier. Digitaal evalueren doe ik nauwelijks.", points: 1 }, { key: "B", text: "Ik maak wel eens een simpele digitale quiz (bv. in Forms of BookWidgets basis).", points: 2 }, { key: "C", text: "Ik zet digitale evaluatie strategisch in om snel en gericht feedback te kunnen geven.", points: 3 } ] },
+            { id: 5, name: "Leerlingen ondersteunen (Differentiatie)", icon: "fa-users", options: [ { key: "A", text: "Iedereen krijgt in mijn les grotendeels hetzelfde materiaal op hetzelfde moment.", points: 1 }, { key: "B", text: "Ik voorzie soms extra digitale oefeningen voor snelle werkers of zwakkere leerlingen.", points: 2 }, { key: "C", text: "Ik zet tools in om structureel te differentiëren en gepersonaliseerde trajecten/feedback aan te bieden.", points: 3 } ] },
+            { id: 6, name: "AI & Digitale competenties", icon: "fa-robot", options: [ { key: "A", text: "Ik heb er geen ervaring mee en weet niet hoe ik er veilig mee kan starten.", points: 1 }, { key: "B", text: "Ik heb er al mee geëxperimenteerd, maar bots op valkuilen of weet niet goed wat goede prompts zijn.", points: 2 }, { key: "C", text: "Ik gebruik AI regelmatig en kritisch om lesteksten te bewerken, ideeën te genereren of tijd te winnen.", points: 3 } ] }
+        ];
+
+        const modulesData = {
+            b1: { title: "Mod 1 – Digitale basis & samenwerken", type: "Beginner", items: ["Teams, OneDrive, Outlook", "Bestanden delen", "Digitaal in balans"] },
+            b2: { title: "Mod 2 – Basis tools in de klas", type: "Beginner", items: ["PowerPoint (basis)", "Canva (basis)", "Kahoot / LessonUp"] },
+            b3: { title: "Mod 3 – Activerend lesgeven", type: "Beginner", items: ["Interactieve werkvormen", "Eenvoudige webquests"] },
+            b4: { title: "Mod 4 – Evalueren (basis)", type: "Beginner", items: ["Toetsen in Word", "Digitale quiz", "Basis BookWidgets"] },
+            b5: { title: "Mod 5 – AI basics voor leerkrachten", type: "Beginner", items: ["Wat is AI?", "Copilot gebruiken", "Valkuilen (hallucinaties)"] },
+            g1: { title: "Mod 1 – Sterke digitale didactiek", type: "Gevorderd", items: ["Wanneer wel/niet ICT?", "Activerende werkvormen", "Blended learning"] },
+            g2: { title: "Mod 2 – Geavanceerde tools", type: "Gevorderd", items: ["BookWidgets (gevorderd)", "Canva (didactisch)", "LessonUp verdieping"] },
+            g3: { title: "Mod 3 – Differentiatie & ondersteuning", type: "Gevorderd", items: ["Digitale differentiatie", "Feedbackstrategieën", "Classroom Cloud"] }
+        };
+
+        let currentStep = 0; 
+        let userAnswers = {}; 
+
+        function initSidebar() {
+            const nav = document.getElementById('sidebar-nav');
+            domains.forEach(d => {
+                nav.innerHTML += `
+                    <div id="nav-item-${d.id}" class="nav-item flex items-center justify-between px-3 py-2.5 rounded-lg text-white/60 transition-colors">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded flex items-center justify-center bg-white/5 border border-white/10">
+                                <i class="fa-solid ${d.icon} text-[10px]"></i>
+                            </div>
+                            <div class="text-xs font-bold uppercase tracking-wider">Domein ${d.id}</div>
+                        </div>
+                        <i class="fa-solid fa-check text-rgreen opacity-0 text-[10px]" id="nav-check-${d.id}"></i>
+                    </div>
+                `;
+            });
+        }
+
+        function updateSidebar() {
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('bg-white/10', 'text-white');
+                el.classList.add('text-white/60');
+            });
+
+            if (currentStep === 0) {
+                document.querySelector('.nav-item[data-step="0"]').classList.add('bg-white/10', 'text-white');
+                document.querySelector('.nav-item[data-step="0"]').classList.remove('text-white/60');
+            } else if (currentStep <= domains.length) {
+                const activeItem = document.getElementById(`nav-item-${currentStep}`);
+                activeItem.classList.add('bg-white/10', 'text-white');
+                activeItem.classList.remove('text-white/60');
+            }
+
+            for(let i=1; i<=domains.length; i++){
+                const check = document.getElementById(`nav-check-${i}`);
+                if(userAnswers[i] && userAnswers[i].level && userAnswers[i].importance) {
+                    check.classList.remove('opacity-0');
+                } else {
+                    check.classList.add('opacity-0');
+                }
+            }
+
+            const progress = (Object.keys(userAnswers).length / domains.length) * 100;
+            document.getElementById('sidebar-progress-bar').style.width = `${progress}%`;
+            document.getElementById('sidebar-progress-text').innerText = `${Math.round(progress)}%`;
+        }
+
+        function renderStep() {
+            updateSidebar();
+
+            if (currentStep === 0) {
+                document.getElementById('step-0').classList.remove('hidden');
+                document.getElementById('question-wizard').classList.add('hidden');
+                document.getElementById('results-screen').classList.add('hidden');
+                document.getElementById('hero-welcome').classList.remove('hidden');
+                document.getElementById('hero-compact').classList.add('hidden');
+                document.getElementById('hero-section').classList.remove('py-6');
+                document.getElementById('hero-section').classList.add('py-10', 'md:py-16');
+                return;
+            }
+
+            if (currentStep > domains.length) {
+                calculateResults();
+                return;
+            }
+
+            document.getElementById('step-0').classList.add('hidden');
+            document.getElementById('question-wizard').classList.remove('hidden');
+            document.getElementById('results-screen').classList.add('hidden');
+
+            document.getElementById('hero-welcome').classList.add('hidden');
+            document.getElementById('hero-compact').classList.remove('hidden');
+            document.getElementById('hero-section').classList.add('py-6');
+            document.getElementById('hero-section').classList.remove('py-10', 'md:py-16');
+
+            const domainIndex = currentStep - 1;
+            const currentDomain = domains[domainIndex];
+
+            document.getElementById('header-step-number').innerText = currentDomain.id;
+            document.getElementById('header-domain-badge').innerText = `Domein ${currentDomain.id} van ${domains.length}`;
+            document.getElementById('header-domain-title').innerText = currentDomain.name;
+
+            const optionsContainer = document.getElementById('level-options');
+            optionsContainer.innerHTML = '';
+            const savedLevel = userAnswers[currentStep]?.level || null;
+
+            currentDomain.options.forEach(opt => {
+                const isChecked = savedLevel === opt.points ? 'checked' : '';
+                const cardActiveStyle = savedLevel === opt.points ? 'border-rblue bg-slate-50 ring-1 ring-rblue shadow-sm' : 'border-slate-200 bg-white hover:border-slate-300';
+                
+                optionsContainer.innerHTML += `
+                    <label onclick="selectLevelCard(this, ${opt.points})" class="level-card flex items-start p-4 border-2 ${cardActiveStyle} rounded-xl cursor-pointer transition-all">
+                        <div class="flex items-center h-5 mt-0.5">
+                            <input type="radio" name="domain-level" value="${opt.points}" ${isChecked} class="h-4 w-4 text-rblue focus:ring-rblue border-slate-300">
+                        </div>
+                        <div class="ml-4 text-sm">
+                            <span class="font-black text-rblue mr-2">${opt.key}.</span>
+                            <span class="text-slate-600 font-medium">${opt.text}</span>
+                        </div>
+                    </label>
+                `;
+            });
+
+            const savedBelang = userAnswers[currentStep]?.importance || null;
+            resetBelangButtons();
+            if (savedBelang) {
+                const activeBtn = document.querySelector(`.belang-btn[data-value="${savedBelang}"]`);
+                if (activeBtn) selectBelangVisual(activeBtn);
+            }
+
+            validateStepForm();
+        }
+
+        function selectLevelCard(element, points) {
+            document.querySelectorAll('.level-card').forEach(card => {
+                card.classList.remove('border-rblue', 'bg-slate-50', 'ring-1', 'ring-rblue', 'shadow-sm');
+                card.classList.add('border-slate-200', 'bg-white');
+            });
+            element.classList.remove('border-slate-200', 'bg-white');
+            element.classList.add('border-rblue', 'bg-slate-50', 'ring-1', 'ring-rblue', 'shadow-sm');
+            element.querySelector('input[type="radio"]').checked = true;
+            
+            if(!userAnswers[currentStep]) userAnswers[currentStep] = {};
+            userAnswers[currentStep].level = points;
+            validateStepForm();
+        }
+
+        function setBelang(value) {
+            if(!userAnswers[currentStep]) userAnswers[currentStep] = {};
+            userAnswers[currentStep].importance = value;
+            resetBelangButtons();
+            const btn = document.querySelector(`.belang-btn[data-value="${value}"]`);
+            if (btn) selectBelangVisual(btn);
+            validateStepForm();
+        }
+
+        function selectBelangVisual(btn) {
+            btn.classList.remove('border-slate-200', 'bg-white');
+            btn.classList.add('border-rblue', 'bg-slate-50', 'ring-2', 'ring-rblue/20');
+            const num = btn.querySelector('span:first-child');
+            num.classList.remove('text-slate-300', 'text-slate-400', 'text-slate-600', 'text-slate-800');
+            num.classList.add('text-rblue');
+        }
+
+        function resetBelangButtons() {
+            document.querySelectorAll('.belang-btn').forEach(btn => {
+                btn.classList.remove('border-rblue', 'bg-slate-50', 'ring-2', 'ring-rblue/20');
+                btn.classList.add('border-slate-200', 'bg-white');
+                const num = btn.querySelector('span:first-child');
+                num.classList.remove('text-rblue');
+                const val = btn.getAttribute('data-value');
+                if(val==='1') num.classList.add('text-slate-300');
+                if(val==='2') num.classList.add('text-slate-400');
+                if(val==='3') num.classList.add('text-slate-600');
+                if(val==='4') num.classList.add('text-slate-800');
+            });
+        }
+
+        function validateStepForm() {
+            const nextBtn = document.getElementById('next-btn');
+            const ans = userAnswers[currentStep];
+            nextBtn.disabled = !(ans && ans.level && ans.importance);
+        }
+
+        function processNext() { if (currentStep <= domains.length) { currentStep++; renderStep(); } }
+        function nextStep() { currentStep++; renderStep(); }
+        function prevStep() { if (currentStep > 0) { currentStep--; renderStep(); } }
+        function restartSurvey() { currentStep = 0; userAnswers = {}; renderStep(); }
+
+        function calculateResults() {
+            document.getElementById('question-wizard').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+            document.getElementById('hero-compact').classList.add('hidden');
+            
+            document.getElementById('hero-welcome').classList.remove('hidden');
+            document.getElementById('hero-welcome').innerHTML = `
+                <div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] tracking-widest px-3 py-1 rounded-sm uppercase mb-4">Sint-Rembert Aanbeveling</div>
+                <h1 class="text-4xl font-black uppercase tracking-tight text-white">JOUW PERSOONLIJKE <span class="text-rgreen">LEERLIJN</span></h1>
+            `;
+
+            let beginners = new Set(), gevorderden = new Set(), notes = {};
+            // Bereid data voor grafiek voor
+            let levelScores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+
+            for (let d = 1; d <= 6; d++) {
+                const ans = userAnswers[d];
+                if (!ans) continue;
+                
+                const n = ans.level;
+                // Bewaar niveau score voor grafiek
+                levelScores[d] = n;
+
+                if (ans.importance <= 2) continue; // Belangrijkste criteria voor modules
+                
+                if (d === 1) { if (n <= 2) { beginners.add('b1'); if(n===2) notes['b1']="Basis verstevigen"; } }
+                if (d === 2) { if (n <= 2) { beginners.add('b2'); if(n===2) notes['b2']="Basis verstevigen"; } else gevorderden.add('g2'); }
+                if (d === 3) { if (n <= 2) { beginners.add('b3'); if(n===2) notes['b3']="Basis verstevigen"; } else gevorderden.add('g1'); }
+                if (d === 4) { if (n <= 2) { beginners.add('b4'); if(n===2) notes['b4']="Basis verstevigen"; } else gevorderden.add('g2'); }
+                if (d === 5) { gevorderden.add('g3'); if(n<=2) notes['g3']="Groeipad nadat basis oké is."; }
+                if (d === 6) { if (n <= 2) { beginners.add('b5'); if(n===2) notes['b5']="Basis verstevigen"; } }
+            }
+
+            const renderCards = (set, containerId, wrapperId) => {
+                const container = document.getElementById(containerId);
+                container.innerHTML = '';
+                if (set.size === 0) { document.getElementById(wrapperId).classList.add('hidden'); } 
+                else {
+                    document.getElementById(wrapperId).classList.remove('hidden');
+                    set.forEach(id => {
+                        const mod = modulesData[id];
+                        let items = mod.items.map(i => `<li class="flex items-center space-x-2 text-sm text-slate-600"><i class="fa-solid fa-check text-rgreen bg-rblue rounded-full w-4 h-4 flex items-center justify-center text-[8px]"></i><span>${i}</span></li>`).join('');
+                        let noteBadge = notes[id] ? `<div class="mt-3 text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-100 inline-block uppercase tracking-wider">${notes[id]}</div>` : '';
+                        
+                        container.innerHTML += `
+                            <div class="border-2 border-slate-100 rounded-xl p-5 hover:border-rblue/30 transition-colors bg-white hover:shadow-md hover:scale-[1.01] transition-all">
+                                <h4 class="font-black text-rblue text-lg mb-3">${mod.title}</h4>
+                                <ul class="space-y-2 mb-2">${items}</ul>
+                                ${noteBadge}
+                            </div>
+                        `;
+                    });
+                }
+            };
+
+            renderCards(beginners, 'container-beginners', 'wrapper-beginners');
+            renderCards(gevorderden, 'container-gevorderden', 'wrapper-gevorderden');
+
+            // Genereer de grafiek
+            renderLevelRadarChart(levelScores);
+
+            if (beginners.size === 0 && gevorderden.size === 0) {
+                document.getElementById('no-modules-notice').classList.remove('hidden');
+            } else {
+                document.getElementById('no-modules-notice').classList.add('hidden');
+            }
+        }
+
+        // Nieuwe functie om de radar grafiek te genereren via SVG
+        function renderLevelRadarChart(levelScores) {
+            const container = document.getElementById('container-grafiek');
+            container.innerHTML = ''; // Maak container leeg
+
+            const canvasSize = 400; // Iets groter voor betere weergave
+            const center = canvasSize / 2;
+            const maxRadius = (canvasSize / 2) * 0.8;
+            const maxScore = 3;
+            const numDomains = domains.length;
+
+            let svgHtml = `<svg width="100%" height="100%" viewBox="0 0 ${canvasSize} ${canvasSize}" class="block mx-auto max-w-[400px]">`;
+
+            // 1. Teken de achtergrond cirkels (niveau-lijnen) en labels
+            for (let i = 1; i <= maxScore; i++) {
+                const radius = (i / maxScore) * maxRadius;
+                svgHtml += `<circle cx="${center}" cy="${center}" r="${radius}" fill="none" stroke="#e2e8f0" stroke-width="1"/>`;
+                // Plaats niveau-labels gecentreerd op de bovenste as
+                svgHtml += `<text x="${center}" y="${center - radius}" text-anchor="middle" font-size="10" fill="#94a3b8" dy="3">${i}</text>`; 
+            }
+
+            // 2. Teken de assen en labels
+            let pointsString = '';
+            domains.forEach((d, index) => {
+                // De assen beginnen op -Math.PI/2 (bovenaan) en draaien met de klok mee
+                const angle = -Math.PI / 2 + (Math.PI * 2 * index) / numDomains;
+                const x = center + Math.cos(angle) * maxRadius;
+                const y = center + Math.sin(angle) * maxRadius;
+                const labelRadius = maxRadius * 1.2; // Iets dichter voor labels
+                const lx = center + Math.cos(angle) * labelRadius;
+                const ly = center + Math.sin(angle) * labelRadius;
+
+                // As
+                svgHtml += `<line x1="${center}" y1="${center}" x2="${x}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>`;
+
+                // Label (verkorte domeinnaam of ID)
+                svgHtml += `<text x="${lx}" y="${ly}" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748b" dy="3">D${d.id}</text>`;
+
+                // 3. Score-punten voor het vulvlak
+                const score = levelScores[d.id];
+                const scoreRadius = (score / maxScore) * maxRadius;
+                const px = center + Math.cos(angle) * scoreRadius;
+                const py = center + Math.sin(angle) * scoreRadius;
+                pointsString += `${px},${py} `;
+            });
+
+            // 4. Teken het vulvlak (gebruikers-score) met transparante felgroene vulkleur en felgroene rand
+            svgHtml += `<polygon points="${pointsString}" fill="rgba(175, 255, 0, 0.4)" stroke="#AFFF00" stroke-width="2"/>`;
+
+            svgHtml += '</svg>';
+
+            // 5. Voeg de legenda toe onder de grafiek
+            let legendeHtml = `<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-xs text-slate-600 mt-4 max-w-xl mx-auto border-t border-slate-100 pt-4">`;
+            domains.forEach(d => {
+                legendeHtml += `<div class="flex items-center space-x-2"><span class="font-bold text-rblue">D${d.id}:</span> <span>${d.name}</span></div>`;
+            });
+            legendeHtml += `</div>`;
+
+            container.innerHTML = svgHtml + legendeHtml;
+        }
+
+        window.onload = () => { initSidebar(); renderStep(); };
+    </script>
+</body>
+</html>
