@@ -107,7 +107,7 @@
                             <span>WANT... IN WAT MOET JE JE NÚ BIJSCHOLEN?</span>
                         </h3>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Beste collega, de opties zijn eindeloos: Copilot, Canva, BookWidgets, Teams... <strong>Maar wat heb jij nú nodig?</strong> Vul deze korte zelftest in en ontdek welke sessies perfect aansluiten bij jouw niveau en jouw klaspraktijk. Daarna kun je meteen eenvoudig inschrijven via de reLearn app!
+                            Beste collega, de opties voor het professionaliseringsjaar 2026-2027 zijn eindeloos: CoPilot, Canva, BookWidgets, Lunch & Learns... <strong>Maar wat heb jij nú nodig?</strong> Vul deze korte zelftest in en ontdek welke sessies perfect aansluiten bij jouw niveau en jouw klaspraktijk. Daarna kun je meteen eenvoudig inschrijven via de reLearn app!
                         </p>
                     </div>
                     <div class="pt-4">
@@ -158,7 +158,7 @@
                 <div id="results-screen" class="hidden space-y-10">
                     <div class="text-center md:text-left space-y-2 border-b border-slate-200 pb-6">
                         <h2 class="text-3xl font-black text-rblue uppercase tracking-tight">JOUW <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">NASCHOLINGEN</span></h2>
-                        <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die momenteel gepland staan voor jouw niveau.</p>
+                        <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die in 2026-2027 gepland staan voor jouw niveau.</p>
                     </div>
 
                     <div id="wrapper-beginners" class="space-y-4">
@@ -220,18 +220,54 @@
             { id: 6, name: "AI & Digitale competenties", icon: "fa-robot", options: [ { key: "A", text: "Ik heb er geen ervaring mee en weet niet hoe ik er veilig mee kan starten.", points: 1 }, { key: "B", text: "Ik heb er al mee geëxperimenteerd, maar bots op valkuilen of weet niet goed wat goede prompts zijn.", points: 2 }, { key: "C", text: "Ik gebruik AI regelmatig en kritisch om lesteksten te bewerken, ideeën te genereren of tijd te winnen.", points: 3 } ] }
         ];
 
-        // NIEUWE DATABASE MET CONCRETE NASCHOLINGEN & DATA
+        // DATA MET SMARTSCHOOL IN DOMEIN 1 EN DOMEIN 5
         const modulesData = {
-            d1_basis: { title: "Organisatie & Communicatie (Basis)", items: ["Microsoft Edge <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>1/10</span>", "Microsoft Education <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>15/10</span>", "Teams <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>23/11</span>", "Outlook (over de middag) <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>11/01</span>", "OneDrive <span class='text-slate-400 italic text-xs'>(Datum volgt)</span>"] },
-            d2_basis: { title: "Lesmateriaal Maken (Basis)", items: ["Word: Toetsen maken (na 16u) <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>17/11</span>", "Excel: Rekenen en analyseren (1e & 2e lesuur) <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>01/12</span>", "Canva voor beginners <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>09/03</span>"] },
-            d2_gevorderd: { title: "Visueel Lesmateriaal (Gevorderd)", items: ["Canva voor gevorderden en AI+ <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>20/04</span>"] },
-            d3_basis: { title: "Activerend Lesgeven", items: ["Kahoot <span class='text-slate-400 italic text-xs'>(Datum volgt)</span>", "X-mind <span class='text-slate-400 italic text-xs'>(Optioneel)</span>"] },
-            d3_gevorderd: { title: "Geavanceerde Interactie", items: ["Scratch <span class='text-slate-400 italic text-xs'>(Datum volgt)</span>"] },
-            d4_basis: { title: "Digitaal Evalueren (Basis)", items: ["Bookwidgets voor beginners <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>22/10</span>", "Word: Toetsen maken (na 16u) <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>17/11</span>"] },
-            d4_gevorderd: { title: "Digitaal Evalueren (Gevorderd)", items: ["Bookwidgets voor gevorderden en AI+ <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>14/01</span>"] },
-            d5_basis: { title: "Zorg & Inclusie", items: ["Alinea <span class='text-slate-400 italic text-xs'>(Datum volgt)</span>"] },
-            d5_gevorderd: { title: "Differentiatie & Opvolging", items: ["Classroom cloud (over de middag) <span class='text-slate-400 italic text-xs'>(Datum volgt)</span>"] },
-            d6_ai: { title: "AI in de Praktijk", items: ["Bookwidgets voor gevorderden en AI+ <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>14/01</span>", "Canva voor gevorderden en AI+ <span class='text-rblue font-bold text-xs bg-slate-100 px-1.5 rounded'>20/04</span>"] }
+            d1_basis: { title: "Organisatie & Basis IT", items: [
+                "Werken met Smartschool <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
+                "Aan de slag met je laptop <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>28/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "Werken met Microsoft Edge <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Microsoft Teams in de klas <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/11</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Outlook - mail en agenda <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>11/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
+            ] },
+            d2_basis: { title: "Lesmateriaal Maken (Basis)", items: [
+                "Lunch & Learn: Presentaties PPT <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>06/10</span>",
+                "Scherm opnemen met OBS <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Gerits</span>",
+                "Lunch & Learn: Excel Rekenblad <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/12</span>",
+                "Starten met Canva <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/03</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
+            ] },
+            d2_gevorderd: { title: "Visueel Lesmateriaal (Gevorderd)", items: [
+                "Canva voor gevorderden (AI) <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>20/04</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Presentaties maken met Gamma <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>03/05</span> <span class='text-[10px] text-slate-500 ml-1'>N. Devriendt</span>"
+            ] },
+            d3_basis: { title: "Activerend Lesgeven", items: [
+                "Minecraft Education <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Interactief lesgeven met Kahoot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/01</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            ] },
+            d3_gevorderd: { title: "Didactische Verdieping", items: [
+                "Sporenaanbod Taalvakken <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/01, 03/03, 28/03</span>",
+                "Sporenaanbod Algemeen & Praktijk <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/02, 17/03</span>"
+            ] },
+            d4_basis: { title: "Digitaal Evalueren (Basis)", items: [
+                "Bookwidgets voor beginners <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
+                "Lunch & Learn: Toetsen Word <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/11</span>"
+            ] },
+            d4_gevorderd: { title: "Digitaal Evalueren (Gevorderd)", items: [
+                "Bookwidgets (Gevorderden & AI+) <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>14/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
+                "Valide evalueren met AI <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/05</span>"
+            ] },
+            d5_basis: { title: "Zorg, Inclusie & Klasmanagement", items: [
+                "Werken met Smartschool <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
+                "Werken met ClassroomCloud <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            ] },
+            d5_gevorderd: { title: "Differentiatie", items: [
+                "Vraag bij je directie of ICT'er naar op-maat trajecten rond adaptieve leerpaden."
+            ] },
+            d6_ai: { title: "AI in de Praktijk & Visie", items: [
+                "Inspiratie: AI met Howest <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>12/10</span>",
+                "Inspiratie: AI met O. Agirdag <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>18/11</span>",
+                "CoPilot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/02 & 04/03</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "NotebookLM <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/04</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            ] }
         };
 
         let currentStep = 0; 
@@ -371,7 +407,7 @@
                     document.getElementById(wrapperId).classList.remove('hidden');
                     set.forEach(id => {
                         const mod = modulesData[id];
-                        let items = mod.items.map(i => `<li class="flex items-center justify-between text-sm text-slate-600 bg-slate-50 p-2 rounded border border-slate-100"><div class="flex items-center space-x-2"><i class="fa-solid fa-check text-rgreen bg-rblue rounded-full w-4 h-4 flex items-center justify-center text-[8px] shrink-0"></i><span class="font-medium">${i}</span></div></li>`).join('');
+                        let items = mod.items.map(i => `<li class="flex items-center justify-between text-sm text-slate-600 bg-slate-50 p-2.5 rounded border border-slate-100 leading-snug"><div class="flex items-center space-x-3"><i class="fa-solid fa-check text-rgreen bg-rblue rounded-full w-4 h-4 flex items-center justify-center text-[8px] shrink-0 mt-0.5"></i><span class="font-medium">${i}</span></div></li>`).join('');
                         container.innerHTML += `<div class="border-2 border-slate-100 rounded-xl p-5 hover:border-rblue/30 transition-colors bg-white hover:shadow-md hover:scale-[1.01] transition-all"><h4 class="font-black text-rblue text-lg mb-4 flex items-center space-x-2"><i class="fa-solid fa-laptop-file text-slate-300"></i><span>${mod.title}</span></h4><ul class="space-y-2 mb-2">${items}</ul></div>`;
                     });
                 }
