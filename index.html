@@ -69,12 +69,12 @@
         <div id="hero-section" class="bg-rblue text-white px-6 py-10 md:px-12 md:py-16 transition-all duration-500 shrink-0">
             <div id="hero-welcome">
                 <div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] md:text-xs tracking-widest px-3 py-1 rounded-sm uppercase mb-6">Scholengroep Sint-Rembert × reLearn</div>
-                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-6">JE <span class="text-rgreen">DIGITALE</span> GROWTH SPURT START HIER</h1>
-                <p class="text-white/80 max-w-2xl text-sm md:text-base leading-relaxed mb-10">Beste collega, de bijscholingszee is diep en breed. Vul deze zelftest in en gooi de verwarring overboord. Je krijgt direct gepersonaliseerd advies over de concrete modules die het best bij jou passen.</p>
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-6">JE <span class="text-rgreen">PROFESSIONELE</span> GROWTH SPURT START HIER</h1>
+                <p class="text-white/80 max-w-2xl text-sm md:text-base leading-relaxed mb-10">Beste collega, de bijscholingszee is diep en breed. Vul deze zelftest in en gooi de verwarring overboord. Je krijgt direct gepersonaliseerd advies over de concrete (ICT én niet-ICT) modules die het best bij jou passen.</p>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
                     <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
-                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1">6</div><div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Domeinen</div>
+                        <div class="text-2xl md:text-3xl font-black text-rgreen mb-1">7</div><div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Stappen</div>
                     </div>
                     <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
                         <div class="text-2xl md:text-3xl font-black text-rgreen mb-1">~3</div><div class="text-[10px] font-bold text-white/60 uppercase tracking-widest">Minuten tijd</div>
@@ -106,7 +106,7 @@
                 <!-- STAP 0 -->
                 <div id="step-0" class="space-y-8">
                     <div>
-                        <h2 class="text-2xl font-black text-rblue uppercase tracking-tight">JE <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">DIGITALE</span> GROWTH SPURT START HIER</h2>
+                        <h2 class="text-2xl font-black text-rblue uppercase tracking-tight">JE <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">PROFESSIONELE</span> GROWTH SPURT START HIER</h2>
                     </div>
                     <div class="bg-slate-50 border-l-4 border-rblue p-6 rounded-r-xl">
                         <h3 class="font-bold text-rblue flex items-center space-x-2 mb-2">
@@ -114,7 +114,7 @@
                             <span>WANT... IN WAT MOET JE JE NÚ BIJSCHOLEN?</span>
                         </h3>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Beste collega, de opties voor het professionaliseringsjaar 2026-2027 zijn eindeloos: CoPilot, Canva, BookWidgets, Lunch & Learns... <strong>Maar wat heb jij nú nodig?</strong> Vul deze korte zelftest in en ontdek welke sessies perfect aansluiten bij jouw niveau en jouw klaspraktijk. Daarna kun je meteen eenvoudig inschrijven via de reLearn app!
+                            Beste collega, de opties voor het professionaliseringsjaar 2026-2027 zijn eindeloos: ICT-tools, inspiratielezingen, klasmanagement... <strong>Maar wat heb jij nú nodig?</strong> Vul deze korte zelftest in en ontdek welke sessies perfect aansluiten bij jouw niveau en jouw interesses. Daarna kun je meteen eenvoudig inschrijven via de reLearn app!
                         </p>
                     </div>
                     <div class="pt-4">
@@ -126,39 +126,83 @@
 
                 <!-- WIZARD STAPPEN -->
                 <div id="question-wizard" class="hidden space-y-10">
-                    <div class="space-y-4">
-                        <label class="flex items-center text-lg font-bold text-rblue">
-                            <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">1</span> 
-                            Hoe beoordeel je je huidige niveau of aanpak?
-                        </label>
-                        <div id="level-options" class="grid grid-cols-1 gap-3 ml-11"></div>
-                    </div>
-                    <div class="space-y-5 pt-6 border-t border-slate-100">
-                        <label class="flex items-center text-lg font-bold text-rblue">
-                            <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">2</span> 
-                            Hoe belangrijk is het voor jou om je hierin bij te scholen?
-                        </label>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
-                            <button type="button" onclick="setBelang(1)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="1">
-                                <span class="text-3xl font-black text-slate-300 group-hover:text-rblue transition-colors">1</span><span class="text-[10px] text-slate-400 font-bold uppercase mt-2">Helemaal niet</span>
-                            </button>
-                            <button type="button" onclick="setBelang(2)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="2">
-                                <span class="text-3xl font-black text-slate-400 group-hover:text-rblue transition-colors">2</span><span class="text-[10px] text-slate-500 font-bold uppercase mt-2">Eerder niet</span>
-                            </button>
-                            <button type="button" onclick="setBelang(3)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="3">
-                                <span class="text-3xl font-black text-slate-600 group-hover:text-rblue transition-colors">3</span><span class="text-[10px] text-slate-700 font-bold uppercase mt-2">Belangrijk</span>
-                            </button>
-                            <button type="button" onclick="setBelang(4)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="4">
-                                <span class="text-3xl font-black text-slate-800 group-hover:text-rblue transition-colors">4</span><span class="text-[10px] text-rblue font-black uppercase mt-2">Zeer belangrijk</span>
-                            </button>
+                    
+                    <!-- ICT STAPPEN (1-6) -->
+                    <div id="ict-step-container">
+                        <div class="space-y-4">
+                            <label class="flex items-center text-lg font-bold text-rblue">
+                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">A</span> 
+                                Hoe beoordeel je je huidige niveau of aanpak?
+                            </label>
+                            <div id="level-options" class="grid grid-cols-1 gap-3 ml-11"></div>
+                        </div>
+                        <div class="space-y-5 pt-6 border-t border-slate-100">
+                            <label class="flex items-center text-lg font-bold text-rblue">
+                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">B</span> 
+                                Hoe belangrijk is het voor jou om je hierin bij te scholen?
+                            </label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
+                                <button type="button" onclick="setBelang(1)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="1">
+                                    <span class="text-3xl font-black text-slate-300 group-hover:text-rblue transition-colors">1</span><span class="text-[10px] text-slate-400 font-bold uppercase mt-2">Helemaal niet</span>
+                                </button>
+                                <button type="button" onclick="setBelang(2)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="2">
+                                    <span class="text-3xl font-black text-slate-400 group-hover:text-rblue transition-colors">2</span><span class="text-[10px] text-slate-500 font-bold uppercase mt-2">Eerder niet</span>
+                                </button>
+                                <button type="button" onclick="setBelang(3)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="3">
+                                    <span class="text-3xl font-black text-slate-600 group-hover:text-rblue transition-colors">3</span><span class="text-[10px] text-slate-700 font-bold uppercase mt-2">Belangrijk</span>
+                                </button>
+                                <button type="button" onclick="setBelang(4)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="4">
+                                    <span class="text-3xl font-black text-slate-800 group-hover:text-rblue transition-colors">4</span><span class="text-[10px] text-rblue font-black uppercase mt-2">Zeer belangrijk</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- EXTRA INTERESSES STAP (7) -->
+                    <div id="extra-step-container" class="hidden space-y-6">
+                        <label class="flex items-center text-lg font-bold text-rblue mb-6">
+                            Buiten ICT, rond welke thema's wil je dit schooljaar nog professionaliseren? <br> <span class="text-sm font-normal text-slate-500 ml-2">(Meerdere keuzes mogelijk)</span>
+                        </label>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ml-11">
+                            <label class="extra-card border-2 border-slate-200 rounded-xl p-5 cursor-pointer hover:border-rblue transition-all bg-white relative overflow-hidden group">
+                                <input type="checkbox" value="klasmanagement" onchange="toggleExtra(this)" class="absolute opacity-0">
+                                <div class="flex flex-col items-center text-center space-y-3">
+                                    <div class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors icon-bg">
+                                        <i class="fa-solid fa-users-rays text-2xl text-slate-400 group-hover:text-blue-500 icon-text"></i>
+                                    </div>
+                                    <h4 class="font-bold text-slate-700">Klasmanagement, Zorg & Welbevinden</h4>
+                                </div>
+                            </label>
+
+                            <label class="extra-card border-2 border-slate-200 rounded-xl p-5 cursor-pointer hover:border-rblue transition-all bg-white relative overflow-hidden group">
+                                <input type="checkbox" value="inspiratie" onchange="toggleExtra(this)" class="absolute opacity-0">
+                                <div class="flex flex-col items-center text-center space-y-3">
+                                    <div class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-amber-50 transition-colors icon-bg">
+                                        <i class="fa-solid fa-lightbulb text-2xl text-slate-400 group-hover:text-amber-500 icon-text"></i>
+                                    </div>
+                                    <h4 class="font-bold text-slate-700">Inspiratielezingen & Maatschappij</h4>
+                                </div>
+                            </label>
+
+                            <label class="extra-card border-2 border-slate-200 rounded-xl p-5 cursor-pointer hover:border-rblue transition-all bg-white relative overflow-hidden group">
+                                <input type="checkbox" value="didactiek" onchange="toggleExtra(this)" class="absolute opacity-0">
+                                <div class="flex flex-col items-center text-center space-y-3">
+                                    <div class="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors icon-bg">
+                                        <i class="fa-solid fa-book-open text-2xl text-slate-400 group-hover:text-emerald-500 icon-text"></i>
+                                    </div>
+                                    <h4 class="font-bold text-slate-700">Didactiek, Vakspecifiek & Starters</h4>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="flex justify-between items-center pt-8 ml-11 no-print">
                         <button onclick="prevStep()" class="text-slate-400 hover:text-rblue font-bold text-sm uppercase tracking-wider flex items-center space-x-2 transition-colors">
                             <i class="fa-solid fa-arrow-left"></i><span>Vorige</span>
                         </button>
                         <button id="next-btn" onclick="processNext()" class="bg-rblue hover:bg-rblue-light text-white font-bold text-sm uppercase tracking-wider py-3 px-8 rounded-xl shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">
-                            <span>Volgende</span><i class="fa-solid fa-arrow-right"></i>
+                            <span id="next-btn-text">Volgende</span><i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -167,31 +211,49 @@
                 <div id="results-screen" class="hidden space-y-10">
                     <div class="text-center md:text-left space-y-2 border-b border-slate-200 pb-6">
                         <h2 class="text-3xl font-black text-rblue uppercase tracking-tight">JOUW <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">NASCHOLINGEN</span></h2>
-                        <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die in 2026-2027 gepland staan voor jouw niveau.</p>
+                        <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die in 2026-2027 gepland staan voor jouw profiel en interesses.</p>
                     </div>
 
-                    <!-- Beginners Categorie -->
+                    <!-- Beginners ICT -->
                     <div id="wrapper-beginners" class="space-y-4">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-seedling"></i></span>
-                            <span>Aanbevolen: Basis Nascholingen</span>
+                            <span>ICT: Basis Nascholingen</span>
                         </h3>
                         <div id="container-beginners" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     </div>
 
-                    <!-- Gevorderden Categorie -->
-                    <div id="wrapper-gevorderden" class="space-y-4 pt-4">
+                    <!-- Gevorderden ICT -->
+                    <div id="wrapper-gevorderden" class="space-y-4 pt-4 border-t border-slate-100">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-rocket"></i></span>
-                            <span>Aanbevolen: Verdieping & AI+</span>
+                            <span>ICT: Verdieping & AI+</span>
                         </h3>
                         <div id="container-gevorderden" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    </div>
+
+                    <!-- Niet-ICT Interesses -->
+                    <div id="wrapper-extras" class="space-y-4 pt-8 border-t-4 border-slate-100 hidden">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3 mb-6">
+                            <span class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-plus"></i></span>
+                            <span>Jouw Aanvullende Interesses</span>
+                        </h3>
+                        <div id="container-extras" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     </div>
 
                     <div id="no-modules-notice" class="hidden p-8 text-center bg-slate-50 rounded-2xl border border-slate-200">
                         <i class="fa-solid fa-circle-check text-4xl text-slate-300 mb-3"></i>
                         <h3 class="text-lg font-bold text-rblue">Alles lijkt in orde!</h3>
-                        <p class="text-slate-500 mt-2 text-sm">Op basis van je antwoorden zijn er momenteel geen specifieke modules geselecteerd. Neem gerust contact op met de ICT-coördinator voor maatwerk.</p>
+                        <p class="text-slate-500 mt-2 text-sm">Op basis van je antwoorden zijn er momenteel geen specifieke ICT modules geselecteerd. Neem gerust contact op met de ICT-coördinator voor maatwerk.</p>
+                    </div>
+
+                    <!-- Radar Grafiek (Enkel voor ICT) -->
+                    <div id="wrapper-grafiek" class="space-y-4 pt-6 border-t border-slate-100">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-chart-line"></i></span>
+                            <span>Jouw ICT Profiel op Elk Niveau</span>
+                        </h3>
+                        <div id="container-grafiek" class="p-6 bg-slate-50 rounded-2xl border border-slate-200"></div>
                     </div>
 
                     <!-- RELEARN APP CALL TO ACTION -->
@@ -204,15 +266,6 @@
                             <i class="fa-solid fa-mobile-screen-button text-4xl text-rgreen mb-2"></i>
                             <span class="font-bold text-xs uppercase tracking-wider">Open de reLearn App</span>
                         </div>
-                    </div>
-
-                    <!-- Radar Grafiek -->
-                    <div id="wrapper-grafiek" class="space-y-4 pt-6 border-t border-slate-100">
-                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
-                            <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-chart-line"></i></span>
-                            <span>Jouw Digitale Profiel op Elk Niveau</span>
-                        </h3>
-                        <div id="container-grafiek" class="p-6 bg-slate-50 rounded-2xl border border-slate-200"></div>
                     </div>
 
                     <!-- Actieknoppen -->
@@ -240,60 +293,99 @@
             { id: 6, name: "AI & Digitale competenties", icon: "fa-robot", options: [ { key: "A", text: "Ik heb er geen ervaring mee en weet niet hoe ik er veilig mee kan starten.", points: 1 }, { key: "B", text: "Ik heb er al mee geëxperimenteerd, maar bots op valkuilen of weet niet goed wat goede prompts zijn.", points: 2 }, { key: "C", text: "Ik gebruik AI regelmatig en kritisch om lesteksten te bewerken, ideeën te genereren of tijd te winnen.", points: 3 } ] }
         ];
 
-        // VERNIEUWDE DATA GEBASEERD OP KALENDER 26-27
+        // ICT DATA
         const modulesData = {
-            d1_basis: { title: "Organisatie & Basis IT", items: [
-                "Werken met Smartschool <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
-                "Aan de slag met je laptop <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>28/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
-                "Werken met Microsoft Edge <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
-                "Microsoft Teams in de klas <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/11</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
-                "Outlook - mail en agenda <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>11/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
+            d1_basis: { title: "Organisatie & Basis IT", icon: "fa-folder-tree", items: [
+                "Werken met Smartschool <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
+                "Aan de slag met je laptop <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>28/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "Werken met Microsoft Edge <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Microsoft Teams in de klas <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/11</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Outlook - mail en agenda <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>11/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
             ] },
-            d2_basis: { title: "Lesmateriaal Maken (Basis)", items: [
-                "Lunch & Learn: Presentaties PPT <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>06/10</span>",
-                "Scherm opnemen met OBS <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Gerits</span>",
-                "De Cloud in Office <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/11</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>",
-                "Lunch & Learn: Excel Rekenblad <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/12</span>",
-                "Starten met Canva <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/03</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
+            d2_basis: { title: "Lesmateriaal Maken (Basis)", icon: "fa-file-lines", items: [
+                "Lunch & Learn: Presentaties PPT <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>06/10</span>",
+                "Scherm opnemen met OBS <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Gerits</span>",
+                "De Cloud in Office <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/11</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>",
+                "Lunch & Learn: Excel Rekenblad <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/12</span>",
+                "Starten met Canva <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/03</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
             ] },
-            d2_gevorderd: { title: "Visueel Lesmateriaal (Gevorderd)", items: [
-                "Canva voor gevorderden (AI) <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>20/04</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
-                "Presentaties maken met Gamma <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>03/05</span> <span class='text-[10px] text-slate-500 ml-1'>N. Devriendt</span>"
+            d2_gevorderd: { title: "Visueel Lesmateriaal (Gevorderd)", icon: "fa-file-lines", items: [
+                "Canva voor gevorderden (AI) <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>20/04</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Presentaties maken met Gamma <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>03/05</span> <span class='text-[10px] text-slate-500 ml-1'>N. Devriendt</span>"
             ] },
-            d3_basis: { title: "Activerend Lesgeven", items: [
-                "Minecraft Education <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
-                "Interactief lesgeven met Kahoot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/01</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
-                "Effectief digitaal lesgeven <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>16/02</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>"
+            d3_basis: { title: "Activerend Lesgeven", icon: "fa-chalkboard-user", items: [
+                "Minecraft Education <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
+                "Interactief lesgeven met Kahoot <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/01</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "Effectief digitaal lesgeven <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>16/02</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>"
             ] },
-            d3_gevorderd: { title: "Didactische Verdieping", items: [
-                "Sporenaanbod Taalvakken <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/01, 03/03, 28/03</span>",
-                "Sporenaanbod Algemeen & Praktijk <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/02, 17/03</span>"
+            d3_gevorderd: { title: "Didactische Verdieping", icon: "fa-chalkboard-user", items: [
+                "Sporenaanbod Taalvakken <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/01, 03/03, 28/03</span>",
+                "Sporenaanbod Algemeen & Praktijk <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/02, 17/03</span>"
             ] },
-            d4_basis: { title: "Digitaal Evalueren (Basis)", items: [
-                "Bookwidgets voor beginners <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
-                "Lunch & Learn: Toetsen Word <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/11</span>"
+            d4_basis: { title: "Digitaal Evalueren (Basis)", icon: "fa-clipboard-check", items: [
+                "Bookwidgets voor beginners <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
+                "Lunch & Learn: Toetsen Word <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/11</span>"
             ] },
-            d4_gevorderd: { title: "Digitaal Evalueren (Gevorderd)", items: [
-                "Bookwidgets (Gevorderden & AI+) <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>14/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
-                "Valide evalueren met AI <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/05</span>"
+            d4_gevorderd: { title: "Digitaal Evalueren (Gevorderd)", icon: "fa-clipboard-check", items: [
+                "Bookwidgets (Gevorderden & AI+) <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>14/01</span> <span class='text-[10px] text-slate-500 ml-1'>J. Desmet</span>",
+                "Valide evalueren met AI <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/05</span>"
             ] },
-            d5_basis: { title: "Zorg, Inclusie & Klasmanagement", items: [
-                "Werken met Smartschool <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
-                "Werken met ClassroomCloud <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            d5_basis: { title: "Zorg & Klasmanagement", icon: "fa-users", items: [
+                "Werken met Smartschool <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
+                "Werken met ClassroomCloud <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>22/09</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
             ] },
-            d5_gevorderd: { title: "Differentiatie", items: [
+            d5_gevorderd: { title: "Differentiatie", icon: "fa-users", items: [
                 "Vraag bij je directie of ICT'er naar op-maat trajecten rond adaptieve leerpaden."
             ] },
-            d6_ai: { title: "AI in de Praktijk & Visie", items: [
-                "Inspiratie: AI met Howest <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>12/10</span>",
-                "Inspiratie: AI met O. Agirdag <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>18/11</span>",
-                "CoPilot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/02 & 04/03</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
-                "NotebookLM <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/04</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            d6_ai: { title: "AI in de Praktijk & Visie", icon: "fa-robot", items: [
+                "Inspiratie: AI met Howest <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>12/10</span>",
+                "Inspiratie: AI met O. Agirdag <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>18/11</span>",
+                "CoPilot <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>23/02 & 04/03</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "NotebookLM <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/04</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+            ] }
+        };
+
+        // NIEUW: NON-ICT DATA
+        const extraTopicsData = {
+            klasmanagement: { title: "Klasmanagement & Zorg", icon: "fa-users-rays", items: [
+                "Klasmanagement met H. Gaublomme <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>13/01</span>",
+                "Spanning in de klas <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "Spanning in de kleuterklas <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/10</span>",
+                "Traject klasmanagement <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "Verbindend: Dieren van de Axenroos <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>20/10</span>",
+                "Verbindend: Klasdynamie(t)/k <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/12</span>",
+                "Verbindend: Nieuwe Autoriteit <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/10</span>",
+                "Verbindend: Proactief cirkelen <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "Workshop: Coachende vaardigheden <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>17/11</span>",
+                "EHBO basiscursus <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "EHBO bij kinderen <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>14/10</span>",
+                "EHBO opfriscursus <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>24/02</span>"
+            ] },
+            inspiratie: { title: "Inspiratie & Maatschappij", icon: "fa-lightbulb", items: [
+                "Daniel Muijs: kennisrijk curriculum <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span>",
+                "Els Coppens: Emoties bij kinderen <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>18/03</span>",
+                "Geert Taghon: gedragsproblemen <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>18/02</span>",
+                "Lieven De Marez: Jongeren & smartphones <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>02/02</span>",
+                "Peter Adriaenssens: flexgeneratie <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>16/11</span>",
+                "Steve Daponte: Focus = nieuwe goud <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>21/01</span>",
+                "Tom Termote: opvoeden in digitale tijden <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>29/09</span>",
+                "De Triade: Gedeeld leiderschap <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/10</span>"
+            ] },
+            didactiek: { title: "Didactiek, Vakspecifiek & Starters", icon: "fa-book-open", items: [
+                "Kleuterconnect: Wiskunde <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>25/11</span>",
+                "MOEV: Dynamische werkvormen <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/10</span>",
+                "Didactiek voor GOK (UDL) <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "Engels: Young Adult Literature <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>07/10</span>",
+                "Godsdienst: nieuwe leerplannen BO <span class='text-rblue font-bold text-[10px] bg-slate-200 px-1.5 py-0.5 rounded ml-1'>30/09</span>",
+                "Code 95: vakbekwaamheid <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>",
+                "Kick-off voor startende leerkrachten <span class='text-slate-400 italic text-[10px] ml-1'>Meerdere sessies</span>"
             ] }
         };
 
         let currentStep = 0; 
+        const totalSteps = 7; // 6 ICT domeinen + 1 Extra interesses
         let userAnswers = {}; 
+        let selectedExtras = new Set(); // Slaat gekozen extra interesses op
 
         function initSidebar() {
             const nav = document.getElementById('sidebar-nav');
@@ -308,59 +400,132 @@
                     </div>
                 `;
             });
+            // Voeg de 7e stap toe aan menu
+            nav.innerHTML += `
+                <div id="nav-item-7" class="nav-item flex items-center justify-between px-3 py-2.5 rounded-lg text-white/60 transition-colors mt-2 border-t border-white/10 pt-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-6 h-6 rounded flex items-center justify-center bg-white/5 border border-white/10"><i class="fa-solid fa-plus text-[10px]"></i></div>
+                        <div class="text-xs font-bold uppercase tracking-wider">Extra Interesses</div>
+                    </div>
+                    <i class="fa-solid fa-check text-rgreen opacity-0 text-[10px]" id="nav-check-7"></i>
+                </div>
+            `;
         }
 
         function updateSidebar() {
             document.querySelectorAll('.nav-item').forEach(el => { el.classList.remove('bg-white/10', 'text-white'); el.classList.add('text-white/60'); });
+            
             if (currentStep === 0) {
                 document.querySelector('.nav-item[data-step="0"]').classList.add('bg-white/10', 'text-white');
-            } else if (currentStep <= domains.length) {
+            } else if (currentStep <= totalSteps) {
                 document.getElementById(`nav-item-${currentStep}`).classList.add('bg-white/10', 'text-white');
             }
-            for(let i=1; i<=domains.length; i++){
+            
+            // Checkmarks voor ICT domeinen
+            for(let i=1; i<=6; i++){
                 const check = document.getElementById(`nav-check-${i}`);
                 if(userAnswers[i] && userAnswers[i].level && userAnswers[i].importance) check.classList.remove('opacity-0'); else check.classList.add('opacity-0');
             }
-            const progress = (Object.keys(userAnswers).length / domains.length) * 100;
+            
+            // Progress balk (op basis van 7 stappen)
+            let completed = Object.keys(userAnswers).length;
+            if(currentStep > 6) completed = 7; // Als we op stap 7 zitten, rekenen we 6 als af
+            const progress = (completed / totalSteps) * 100;
             document.getElementById('sidebar-progress-bar').style.width = `${progress}%`;
             document.getElementById('sidebar-progress-text').innerText = `${Math.round(progress)}%`;
         }
 
         function renderStep() {
             updateSidebar();
+            
+            // Reset views
+            document.getElementById('step-0').classList.add('hidden'); 
+            document.getElementById('question-wizard').classList.add('hidden'); 
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('hero-welcome').classList.add('hidden'); 
+            document.getElementById('hero-compact').classList.add('hidden');
+            document.getElementById('ict-step-container').classList.add('hidden');
+            document.getElementById('extra-step-container').classList.add('hidden');
+
             if (currentStep === 0) {
-                document.getElementById('step-0').classList.remove('hidden'); document.getElementById('question-wizard').classList.add('hidden'); document.getElementById('results-screen').classList.add('hidden');
-                document.getElementById('hero-welcome').classList.remove('hidden'); document.getElementById('hero-compact').classList.add('hidden');
-                document.getElementById('hero-section').classList.remove('py-6'); document.getElementById('hero-section').classList.add('py-10', 'md:py-16'); return;
+                document.getElementById('step-0').classList.remove('hidden');
+                document.getElementById('hero-welcome').classList.remove('hidden');
+                document.getElementById('hero-section').classList.remove('py-6'); 
+                document.getElementById('hero-section').classList.add('py-10', 'md:py-16'); 
+                return;
             }
-            if (currentStep > domains.length) { calculateResults(); return; }
+            
+            if (currentStep > totalSteps) { calculateResults(); return; }
 
-            document.getElementById('step-0').classList.add('hidden'); document.getElementById('question-wizard').classList.remove('hidden'); document.getElementById('results-screen').classList.add('hidden');
-            document.getElementById('hero-welcome').classList.add('hidden'); document.getElementById('hero-compact').classList.remove('hidden');
-            document.getElementById('hero-section').classList.add('py-6'); document.getElementById('hero-section').classList.remove('py-10', 'md:py-16');
+            // Toon de wizard
+            document.getElementById('question-wizard').classList.remove('hidden');
+            document.getElementById('hero-compact').classList.remove('hidden');
+            document.getElementById('hero-section').classList.add('py-6'); 
+            document.getElementById('hero-section').classList.remove('py-10', 'md:py-16');
 
-            const domainIndex = currentStep - 1; const currentDomain = domains[domainIndex];
-            document.getElementById('header-step-number').innerText = currentDomain.id;
-            document.getElementById('header-domain-badge').innerText = `Domein ${currentDomain.id} van ${domains.length}`;
-            document.getElementById('header-domain-title').innerText = currentDomain.name;
+            // Logica voor de 6 ICT stappen
+            if(currentStep <= 6) {
+                document.getElementById('ict-step-container').classList.remove('hidden');
+                document.getElementById('next-btn-text').innerText = "Volgende";
 
-            const optionsContainer = document.getElementById('level-options'); optionsContainer.innerHTML = '';
-            const savedLevel = userAnswers[currentStep]?.level || null;
+                const domainIndex = currentStep - 1; const currentDomain = domains[domainIndex];
+                document.getElementById('header-step-number').innerText = currentDomain.id;
+                document.getElementById('header-domain-badge').innerText = `Domein ${currentDomain.id} van ${totalSteps}`;
+                document.getElementById('header-domain-title').innerText = currentDomain.name;
 
-            currentDomain.options.forEach(opt => {
-                const isChecked = savedLevel === opt.points ? 'checked' : '';
-                const cardActiveStyle = savedLevel === opt.points ? 'border-rblue bg-slate-50 ring-1 ring-rblue shadow-sm' : 'border-slate-200 bg-white hover:border-slate-300';
-                optionsContainer.innerHTML += `
-                    <label onclick="selectLevelCard(this, ${opt.points})" class="level-card flex items-start p-4 border-2 ${cardActiveStyle} rounded-xl cursor-pointer transition-all">
-                        <div class="flex items-center h-5 mt-0.5"><input type="radio" name="domain-level" value="${opt.points}" ${isChecked} class="h-4 w-4 text-rblue focus:ring-rblue border-slate-300"></div>
-                        <div class="ml-4 text-sm"><span class="font-black text-rblue mr-2">${opt.key}.</span><span class="text-slate-600 font-medium">${opt.text}</span></div>
-                    </label>
-                `;
-            });
+                const optionsContainer = document.getElementById('level-options'); optionsContainer.innerHTML = '';
+                const savedLevel = userAnswers[currentStep]?.level || null;
 
-            const savedBelang = userAnswers[currentStep]?.importance || null; resetBelangButtons();
-            if (savedBelang) selectBelangVisual(document.querySelector(`.belang-btn[data-value="${savedBelang}"]`));
-            validateStepForm();
+                currentDomain.options.forEach(opt => {
+                    const isChecked = savedLevel === opt.points ? 'checked' : '';
+                    const cardActiveStyle = savedLevel === opt.points ? 'border-rblue bg-slate-50 ring-1 ring-rblue shadow-sm' : 'border-slate-200 bg-white hover:border-slate-300';
+                    optionsContainer.innerHTML += `
+                        <label onclick="selectLevelCard(this, ${opt.points})" class="level-card flex items-start p-4 border-2 ${cardActiveStyle} rounded-xl cursor-pointer transition-all">
+                            <div class="flex items-center h-5 mt-0.5"><input type="radio" name="domain-level" value="${opt.points}" ${isChecked} class="h-4 w-4 text-rblue focus:ring-rblue border-slate-300"></div>
+                            <div class="ml-4 text-sm"><span class="font-black text-rblue mr-2">${opt.key}.</span><span class="text-slate-600 font-medium">${opt.text}</span></div>
+                        </label>
+                    `;
+                });
+
+                const savedBelang = userAnswers[currentStep]?.importance || null; resetBelangButtons();
+                if (savedBelang) selectBelangVisual(document.querySelector(`.belang-btn[data-value="${savedBelang}"]`));
+                validateStepForm();
+            } 
+            // Logica voor stap 7 (Extra Interesses)
+            else if (currentStep === 7) {
+                document.getElementById('extra-step-container').classList.remove('hidden');
+                document.getElementById('header-step-number').innerText = 7;
+                document.getElementById('header-domain-badge').innerText = `Stap 7 van ${totalSteps}`;
+                document.getElementById('header-domain-title').innerText = "Extra Interesses";
+                document.getElementById('next-btn-text').innerText = "Toon Mijn Advies";
+                document.getElementById('next-btn').disabled = false; // Stap 7 is optioneel, knop altijd aan
+            }
+        }
+
+        // Toggle logica voor de checkbox kaarten in stap 7
+        function toggleExtra(checkbox) {
+            const label = checkbox.closest('label');
+            const iconBg = label.querySelector('.icon-bg');
+            const iconText = label.querySelector('.icon-text');
+
+            if(checkbox.checked) {
+                selectedExtras.add(checkbox.value);
+                label.classList.remove('border-slate-200');
+                label.classList.add('border-rblue', 'bg-slate-50', 'ring-1', 'ring-rblue', 'shadow-sm');
+                
+                // Behoud hover kleuren maar forceer ze als actief
+                if(checkbox.value === 'klasmanagement') { iconBg.classList.add('bg-blue-100'); iconText.classList.add('text-blue-600'); }
+                if(checkbox.value === 'inspiratie') { iconBg.classList.add('bg-amber-100'); iconText.classList.add('text-amber-600'); }
+                if(checkbox.value === 'didactiek') { iconBg.classList.add('bg-emerald-100'); iconText.classList.add('text-emerald-600'); }
+            } else {
+                selectedExtras.delete(checkbox.value);
+                label.classList.remove('border-rblue', 'bg-slate-50', 'ring-1', 'ring-rblue', 'shadow-sm');
+                label.classList.add('border-slate-200');
+
+                // Reset icon kleuren
+                iconBg.classList.remove('bg-blue-100', 'bg-amber-100', 'bg-emerald-100');
+                iconText.classList.remove('text-blue-600', 'text-amber-600', 'text-emerald-600');
+            }
         }
 
         function selectLevelCard(element, points) {
@@ -391,19 +556,18 @@
         }
 
         function validateStepForm() {
+            if(currentStep === 7) return; // Stap 7 altijd geldig
             const nextBtn = document.getElementById('next-btn'); const ans = userAnswers[currentStep];
             nextBtn.disabled = !(ans && ans.level && ans.importance);
         }
 
-        function processNext() { if (currentStep <= domains.length) { currentStep++; renderStep(); } }
+        function processNext() { if (currentStep <= totalSteps) { currentStep++; renderStep(); } }
         function nextStep() { currentStep++; renderStep(); }
         function prevStep() { if (currentStep > 0) { currentStep--; renderStep(); } }
-        function restartSurvey() { currentStep = 0; userAnswers = {}; renderStep(); }
+        function restartSurvey() { currentStep = 0; userAnswers = {}; selectedExtras.clear(); renderStep(); }
 
         function calculateResults() {
-            document.getElementById('question-wizard').classList.add('hidden'); 
-            document.getElementById('results-screen').classList.remove('hidden'); 
-            document.getElementById('hero-compact').classList.add('hidden');
+            document.getElementById('question-wizard').classList.add('hidden'); document.getElementById('results-screen').classList.remove('hidden'); document.getElementById('hero-compact').classList.add('hidden');
             document.getElementById('hero-welcome').classList.remove('hidden');
             document.getElementById('hero-welcome').innerHTML = `<div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] tracking-widest px-3 py-1 rounded-sm uppercase mb-4">Sint-Rembert Aanbeveling</div><h1 class="text-4xl font-black uppercase tracking-tight text-white">JOUW PERSOONLIJKE <span class="text-rgreen">LEERLIJN</span></h1>`;
 
@@ -424,51 +588,54 @@
                 if (d === 6) { gevorderden.add('d6_ai'); }
             }
 
-            // --- NIEUWE FALLBACK LOGICA ---
-            const noticeBox = document.getElementById('no-modules-notice');
-            const gevorderdenTitel = document.querySelector('#wrapper-gevorderden h3 span:last-child');
-
-            if (beginners.size === 0 && gevorderden.size === 0) {
-                // Als ze alles op 'niet belangrijk' hebben gezet, forceer dan de AI inspiratiesessies
-                gevorderden.add('d6_ai');
-                
-                // Pas de titel van het blok aan naar iets laagdrempeligs
-                if(gevorderdenTitel) gevorderdenTitel.innerText = "Laagdrempelige Inspiratie (Aanrader)";
-                
-                // Toon een vriendelijk bericht dat we hun drukke agenda snappen
-                noticeBox.classList.remove('hidden');
-                noticeBox.innerHTML = `
-                    <i class="fa-solid fa-mug-hot text-4xl text-amber-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-rblue">Drukke agenda? Geen probleem!</h3>
-                    <p class="text-slate-500 mt-2 text-sm">Je gaf aan dat bijscholen momenteel geen topprioriteit is. Toch even ontspannen inspiratie opdoen zonder voorbereiding of huiswerk achteraf? We raden je aan om gewoon eens te komen luisteren naar een van onze sprekers:</p>
-                `;
-            } else {
-                // Standaard weergave als ze wel modules hebben
-                noticeBox.classList.add('hidden');
-                if(gevorderdenTitel) gevorderdenTitel.innerText = "Aanbevolen: Verdieping & AI+";
-            }
-            // ------------------------------
-
-            const renderCards = (set, containerId, wrapperId) => {
+            // ICT Categorieën renderen
+            const renderCards = (set, containerId, wrapperId, sourceData) => {
                 const container = document.getElementById(containerId); container.innerHTML = '';
                 if (set.size === 0) { document.getElementById(wrapperId).classList.add('hidden'); } 
                 else {
                     document.getElementById(wrapperId).classList.remove('hidden');
                     set.forEach(id => {
-                        const mod = modulesData[id];
-                        let items = mod.items.map(i => `<li class="flex items-center justify-between text-sm text-slate-600 bg-slate-50 p-2.5 rounded border border-slate-100 leading-snug"><div class="flex items-center space-x-3"><i class="fa-solid fa-check text-rgreen bg-rblue rounded-full w-4 h-4 flex items-center justify-center text-[8px] shrink-0 mt-0.5"></i><span class="font-medium">${i}</span></div></li>`).join('');
-                        container.innerHTML += `<div class="border-2 border-slate-100 rounded-xl p-5 hover:border-rblue/30 transition-colors bg-white hover:shadow-md hover:scale-[1.01] transition-all"><h4 class="font-black text-rblue text-lg mb-4 flex items-center space-x-2"><i class="fa-solid fa-laptop-file text-slate-300"></i><span>${mod.title}</span></h4><ul class="space-y-2 mb-2">${items}</ul></div>`;
+                        const mod = sourceData[id];
+                        let items = mod.items.map(i => `<li class="flex items-start text-sm text-slate-600 bg-slate-50 p-2.5 rounded border border-slate-100 leading-snug"><i class="fa-solid fa-check text-rgreen bg-rblue rounded-full w-4 h-4 flex items-center justify-center text-[8px] shrink-0 mt-0.5 mr-3"></i><span class="font-medium">${i}</span></li>`).join('');
+                        container.innerHTML += `<div class="border-2 border-slate-100 rounded-xl p-5 hover:border-rblue/30 transition-colors bg-white hover:shadow-md hover:scale-[1.01] transition-all"><h4 class="font-black text-rblue text-lg mb-4 flex items-center space-x-2"><i class="fa-solid ${mod.icon} text-slate-300"></i><span>${mod.title}</span></h4><ul class="space-y-2 mb-2">${items}</ul></div>`;
                     });
                 }
             };
 
-            renderCards(beginners, 'container-beginners', 'wrapper-beginners');
-            renderCards(gevorderden, 'container-gevorderden', 'wrapper-gevorderden');
+            renderCards(beginners, 'container-beginners', 'wrapper-beginners', modulesData);
+            renderCards(gevorderden, 'container-gevorderden', 'wrapper-gevorderden', modulesData);
+
+            if (beginners.size === 0 && gevorderden.size === 0) {
+                document.getElementById('no-modules-notice').classList.remove('hidden');
+            } else {
+                document.getElementById('no-modules-notice').classList.add('hidden');
+            }
+
+            // Extra Interesses Renderen
+            const extrasWrapper = document.getElementById('wrapper-extras');
+            const extrasContainer = document.getElementById('container-extras');
+            if(selectedExtras.size > 0) {
+                extrasWrapper.classList.remove('hidden');
+                renderCards(selectedExtras, 'container-extras', 'wrapper-extras', extraTopicsData);
+            } else {
+                extrasWrapper.classList.add('hidden');
+            }
+
             renderLevelRadarChart(levelScores);
         }
 
         function renderLevelRadarChart(levelScores) {
             const container = document.getElementById('container-grafiek'); container.innerHTML = '';
+            
+            // Als er geen ICT scores zijn, verberg de grafiek
+            const hasScores = Object.values(levelScores).some(score => score > 0);
+            if(!hasScores) {
+                document.getElementById('wrapper-grafiek').classList.add('hidden');
+                return;
+            } else {
+                document.getElementById('wrapper-grafiek').classList.remove('hidden');
+            }
+
             const canvasSize = 400, center = canvasSize / 2, maxRadius = (canvasSize / 2) * 0.8, maxScore = 3, numDomains = domains.length;
             let svgHtml = `<svg width="100%" height="100%" viewBox="0 0 ${canvasSize} ${canvasSize}" class="block mx-auto max-w-[400px]">`;
 
