@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zelftest: Digitaal & AI-traject | Sint-Rembert</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,6 +19,7 @@
             }
         }
     </script>
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -34,6 +36,7 @@
 </head>
 <body class="bg-rblue flex h-screen overflow-hidden text-slate-800">
 
+    <!-- ZIJBALK -->
     <aside class="w-72 bg-rblue text-white hidden md:flex flex-col h-full border-r border-white/10 flex-shrink-0 z-20 no-print">
         <div class="p-6">
             <span class="bg-rgreen text-rblue-dark font-black text-[10px] tracking-widest px-2.5 py-1 rounded uppercase">Sint-Rembert</span>
@@ -59,8 +62,10 @@
         </div>
     </aside>
 
+    <!-- HOOFDCONTENT -->
     <main class="flex-1 flex flex-col h-full overflow-y-auto bg-white print-area relative">
         
+        <!-- HEADER -->
         <div id="hero-section" class="bg-rblue text-white px-6 py-10 md:px-12 md:py-16 transition-all duration-500 shrink-0">
             <div id="hero-welcome">
                 <div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] md:text-xs tracking-widest px-3 py-1 rounded-sm uppercase mb-6">Scholengroep Sint-Rembert × reLearn</div>
@@ -94,9 +99,11 @@
             </div>
         </div>
 
+        <!-- WITTE CONTENT SECTIE -->
         <div class="flex-1 bg-white px-6 py-10 md:px-12 md:py-12">
             <div class="max-w-4xl mx-auto">
 
+                <!-- STAP 0 -->
                 <div id="step-0" class="space-y-8">
                     <div>
                         <h2 class="text-2xl font-black text-rblue uppercase tracking-tight">JE <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">DIGITALE</span> GROWTH SPURT START HIER</h2>
@@ -117,6 +124,7 @@
                     </div>
                 </div>
 
+                <!-- WIZARD STAPPEN -->
                 <div id="question-wizard" class="hidden space-y-10">
                     <div class="space-y-4">
                         <label class="flex items-center text-lg font-bold text-rblue">
@@ -155,12 +163,14 @@
                     </div>
                 </div>
 
+                <!-- RESULTATENSCHERM -->
                 <div id="results-screen" class="hidden space-y-10">
                     <div class="text-center md:text-left space-y-2 border-b border-slate-200 pb-6">
                         <h2 class="text-3xl font-black text-rblue uppercase tracking-tight">JOUW <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">NASCHOLINGEN</span></h2>
                         <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die in 2026-2027 gepland staan voor jouw niveau.</p>
                     </div>
 
+                    <!-- Beginners Categorie -->
                     <div id="wrapper-beginners" class="space-y-4">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-seedling"></i></span>
@@ -169,6 +179,7 @@
                         <div id="container-beginners" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     </div>
 
+                    <!-- Gevorderden Categorie -->
                     <div id="wrapper-gevorderden" class="space-y-4 pt-4">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-rocket"></i></span>
@@ -177,6 +188,13 @@
                         <div id="container-gevorderden" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     </div>
 
+                    <div id="no-modules-notice" class="hidden p-8 text-center bg-slate-50 rounded-2xl border border-slate-200">
+                        <i class="fa-solid fa-circle-check text-4xl text-slate-300 mb-3"></i>
+                        <h3 class="text-lg font-bold text-rblue">Alles lijkt in orde!</h3>
+                        <p class="text-slate-500 mt-2 text-sm">Op basis van je antwoorden zijn er momenteel geen specifieke modules geselecteerd. Neem gerust contact op met de ICT-coördinator voor maatwerk.</p>
+                    </div>
+
+                    <!-- RELEARN APP CALL TO ACTION -->
                     <div class="mt-10 p-6 bg-gradient-to-r from-rblue to-rblue-light rounded-2xl shadow-lg border border-rblue-dark text-white flex flex-col md:flex-row items-center justify-between no-print">
                         <div class="mb-4 md:mb-0 md:mr-6 text-center md:text-left">
                             <h3 class="text-2xl font-black text-rgreen uppercase tracking-tight mb-2">Inschrijven?</h3>
@@ -188,6 +206,7 @@
                         </div>
                     </div>
 
+                    <!-- Radar Grafiek -->
                     <div id="wrapper-grafiek" class="space-y-4 pt-6 border-t border-slate-100">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-rblue text-rgreen flex items-center justify-center text-sm"><i class="fa-solid fa-chart-line"></i></span>
@@ -196,6 +215,7 @@
                         <div id="container-grafiek" class="p-6 bg-slate-50 rounded-2xl border border-slate-200"></div>
                     </div>
 
+                    <!-- Actieknoppen -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-slate-100 no-print">
                         <button onclick="window.print()" class="flex-1 bg-rblue hover:bg-rblue-light text-white font-bold py-4 px-6 rounded-xl shadow-md transition uppercase tracking-wider text-xs text-center flex items-center justify-center space-x-2">
                             <i class="fa-solid fa-print"></i><span>Sla op als PDF / Print</span>
@@ -220,7 +240,7 @@
             { id: 6, name: "AI & Digitale competenties", icon: "fa-robot", options: [ { key: "A", text: "Ik heb er geen ervaring mee en weet niet hoe ik er veilig mee kan starten.", points: 1 }, { key: "B", text: "Ik heb er al mee geëxperimenteerd, maar bots op valkuilen of weet niet goed wat goede prompts zijn.", points: 2 }, { key: "C", text: "Ik gebruik AI regelmatig en kritisch om lesteksten te bewerken, ideeën te genereren of tijd te winnen.", points: 3 } ] }
         ];
 
-        // DATA MET SMARTSCHOOL IN DOMEIN 1 EN DOMEIN 5
+        // VERNIEUWDE DATA GEBASEERD OP KALENDER 26-27
         const modulesData = {
             d1_basis: { title: "Organisatie & Basis IT", items: [
                 "Werken met Smartschool <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>10/09</span> <span class='text-[10px] text-slate-500 ml-1'>T. Bouvry</span>",
@@ -232,6 +252,7 @@
             d2_basis: { title: "Lesmateriaal Maken (Basis)", items: [
                 "Lunch & Learn: Presentaties PPT <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>06/10</span>",
                 "Scherm opnemen met OBS <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Gerits</span>",
+                "De Cloud in Office <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/11</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>",
                 "Lunch & Learn: Excel Rekenblad <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>01/12</span>",
                 "Starten met Canva <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>09/03</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>"
             ] },
@@ -241,7 +262,8 @@
             ] },
             d3_basis: { title: "Activerend Lesgeven", items: [
                 "Minecraft Education <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>15/10</span> <span class='text-[10px] text-slate-500 ml-1'>J. Demol</span>",
-                "Interactief lesgeven met Kahoot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/01</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>"
+                "Interactief lesgeven met Kahoot <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>19/01</span> <span class='text-[10px] text-slate-500 ml-1'>A. Breemeersch</span>",
+                "Effectief digitaal lesgeven <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>16/02</span> <span class='text-[10px] text-slate-500 ml-1'>A. Croene</span>"
             ] },
             d3_gevorderd: { title: "Didactische Verdieping", items: [
                 "Sporenaanbod Taalvakken <span class='text-rblue font-bold text-xs bg-slate-200 px-1.5 py-0.5 rounded ml-1'>27/01, 03/03, 28/03</span>",
@@ -379,7 +401,9 @@
         function restartSurvey() { currentStep = 0; userAnswers = {}; renderStep(); }
 
         function calculateResults() {
-            document.getElementById('question-wizard').classList.add('hidden'); document.getElementById('results-screen').classList.remove('hidden'); document.getElementById('hero-compact').classList.add('hidden');
+            document.getElementById('question-wizard').classList.add('hidden'); 
+            document.getElementById('results-screen').classList.remove('hidden'); 
+            document.getElementById('hero-compact').classList.add('hidden');
             document.getElementById('hero-welcome').classList.remove('hidden');
             document.getElementById('hero-welcome').innerHTML = `<div class="inline-block bg-rgreen text-rblue-dark font-bold text-[10px] tracking-widest px-3 py-1 rounded-sm uppercase mb-4">Sint-Rembert Aanbeveling</div><h1 class="text-4xl font-black uppercase tracking-tight text-white">JOUW PERSOONLIJKE <span class="text-rgreen">LEERLIJN</span></h1>`;
 
@@ -397,8 +421,33 @@
                 if (d === 3) { if (n <= 2) beginners.add('d3_basis'); else gevorderden.add('d3_gevorderd'); }
                 if (d === 4) { if (n <= 2) beginners.add('d4_basis'); else gevorderden.add('d4_gevorderd'); }
                 if (d === 5) { if (n <= 2) beginners.add('d5_basis'); else gevorderden.add('d5_gevorderd'); }
-                if (d === 6) { gevorderden.add('d6_ai'); } // AI modules tonen voor wie AI wil leren
+                if (d === 6) { gevorderden.add('d6_ai'); }
             }
+
+            // --- NIEUWE FALLBACK LOGICA ---
+            const noticeBox = document.getElementById('no-modules-notice');
+            const gevorderdenTitel = document.querySelector('#wrapper-gevorderden h3 span:last-child');
+
+            if (beginners.size === 0 && gevorderden.size === 0) {
+                // Als ze alles op 'niet belangrijk' hebben gezet, forceer dan de AI inspiratiesessies
+                gevorderden.add('d6_ai');
+                
+                // Pas de titel van het blok aan naar iets laagdrempeligs
+                if(gevorderdenTitel) gevorderdenTitel.innerText = "Laagdrempelige Inspiratie (Aanrader)";
+                
+                // Toon een vriendelijk bericht dat we hun drukke agenda snappen
+                noticeBox.classList.remove('hidden');
+                noticeBox.innerHTML = `
+                    <i class="fa-solid fa-mug-hot text-4xl text-amber-500 mb-3"></i>
+                    <h3 class="text-lg font-bold text-rblue">Drukke agenda? Geen probleem!</h3>
+                    <p class="text-slate-500 mt-2 text-sm">Je gaf aan dat bijscholen momenteel geen topprioriteit is. Toch even ontspannen inspiratie opdoen zonder voorbereiding of huiswerk achteraf? We raden je aan om gewoon eens te komen luisteren naar een van onze sprekers:</p>
+                `;
+            } else {
+                // Standaard weergave als ze wel modules hebben
+                noticeBox.classList.add('hidden');
+                if(gevorderdenTitel) gevorderdenTitel.innerText = "Aanbevolen: Verdieping & AI+";
+            }
+            // ------------------------------
 
             const renderCards = (set, containerId, wrapperId) => {
                 const container = document.getElementById(containerId); container.innerHTML = '';
