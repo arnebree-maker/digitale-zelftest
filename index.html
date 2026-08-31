@@ -130,16 +130,16 @@
                     <!-- ICT STAPPEN (1-6) -->
                     <div id="ict-step-container">
                         <div class="space-y-4">
-                            <label class="flex items-center text-lg font-bold text-rblue">
-                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">A</span> 
-                                Hoe beoordeel je je huidige niveau of aanpak?
+                            <label class="flex items-center text-lg font-bold text-rblue leading-snug">
+                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-sm mr-3 border border-slate-200">A</span> 
+                                <span id="question-a-text">Hoe beoordeel je je huidige niveau of aanpak?</span>
                             </label>
                             <div id="level-options" class="grid grid-cols-1 gap-3 ml-11"></div>
                         </div>
                         <div class="space-y-5 pt-6 border-t border-slate-100">
-                            <label class="flex items-center text-lg font-bold text-rblue">
-                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3 border border-slate-200">B</span> 
-                                Hoe belangrijk is het voor jou om je hierin bij te scholen?
+                            <label class="flex items-center text-lg font-bold text-rblue leading-snug">
+                                <span class="bg-slate-100 text-rblue w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-sm mr-3 border border-slate-200">B</span> 
+                                <span id="question-b-text">Hoe belangrijk is het voor jou om je hierin bij te scholen?</span>
                             </label>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 ml-11">
                                 <button type="button" onclick="setBelang(1)" class="belang-btn border-2 border-slate-200 hover:border-rblue rounded-xl p-4 text-center transition flex flex-col justify-center items-center bg-white h-28 group" data-value="1">
@@ -208,14 +208,27 @@
                 </div>
 
                 <!-- RESULTATENSCHERM -->
-                <div id="results-screen" class="hidden space-y-10">
-                    <div class="text-center md:text-left space-y-2 border-b border-slate-200 pb-6">
+                <div id="results-screen" class="hidden space-y-8">
+                    
+                    <div class="text-center md:text-left space-y-2 pb-2">
                         <h2 class="text-3xl font-black text-rblue uppercase tracking-tight">JOUW <span class="text-rgreen bg-rblue px-2 py-0.5 rounded">NASCHOLINGEN</span></h2>
                         <p class="text-slate-500 text-sm no-print">Dit zijn de concrete sessies die in 2026-2027 gepland staan voor jouw profiel en interesses.</p>
                     </div>
 
+                    <!-- REMBERT ACADEMY APP CALL TO ACTION (VERPLAATST NAAR BOVEN) -->
+                    <div class="p-6 bg-gradient-to-r from-rblue to-rblue-light rounded-2xl shadow-lg border border-rblue-dark text-white flex flex-col md:flex-row items-center justify-between no-print">
+                        <div class="mb-4 md:mb-0 md:mr-6 text-center md:text-left">
+                            <h3 class="text-2xl font-black text-rgreen uppercase tracking-tight mb-2">Meteen Inschrijven?</h3>
+                            <p class="text-white/80 text-sm">Heb je hieronder jouw ideale nascholing gevonden? Schrijf je eenvoudig en snel in via <strong class="text-white">Rembert Academy</strong>. Klik op de knop om direct te openen!</p>
+                        </div>
+                        <a href="https://apps.powerapps.com/play/e/9134860a-eeed-ecc0-8db4-dba1649ee94f/a/e5697d3c-e21d-49b4-9ecc-4c58a225704f?hidenavbar=true" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 bg-white/10 p-4 rounded-xl border border-white/20 flex flex-col items-center hover:bg-white/20 transition-colors cursor-pointer text-white no-underline">
+                            <i class="fa-solid fa-mobile-screen-button text-4xl text-rgreen mb-2"></i>
+                            <span class="font-bold text-xs uppercase tracking-wider text-center">Open Rembert Academy</span>
+                        </a>
+                    </div>
+
                     <!-- Beginners ICT -->
-                    <div id="wrapper-beginners" class="space-y-4">
+                    <div id="wrapper-beginners" class="space-y-4 pt-4 border-t border-slate-100">
                         <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight flex items-center space-x-3">
                             <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm"><i class="fa-solid fa-seedling"></i></span>
                             <span>ICT: Basis Nascholingen</span>
@@ -254,18 +267,6 @@
                             <span>Jouw ICT Profiel op Elk Niveau</span>
                         </h3>
                         <div id="container-grafiek" class="p-6 bg-slate-50 rounded-2xl border border-slate-200"></div>
-                    </div>
-
-                    <!-- REMBERT ACADEMY APP CALL TO ACTION -->
-                    <div class="mt-10 p-6 bg-gradient-to-r from-rblue to-rblue-light rounded-2xl shadow-lg border border-rblue-dark text-white flex flex-col md:flex-row items-center justify-between no-print">
-                        <div class="mb-4 md:mb-0 md:mr-6 text-center md:text-left">
-                            <h3 class="text-2xl font-black text-rgreen uppercase tracking-tight mb-2">Inschrijven?</h3>
-                            <p class="text-white/80 text-sm">Heb je jouw ideale nascholing gevonden? Schrijf je eenvoudig en snel in via <strong class="text-white">Rembert Academy</strong>. Klik op de knop om direct te openen!</p>
-                        </div>
-                        <a href="https://apps.powerapps.com/play/e/9134860a-eeed-ecc0-8db4-dba1649ee94f/a/e5697d3c-e21d-49b4-9ecc-4c58a225704f?hidenavbar=true" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 bg-white/10 p-4 rounded-xl border border-white/20 flex flex-col items-center hover:bg-white/20 transition-colors cursor-pointer text-white no-underline">
-                            <i class="fa-solid fa-mobile-screen-button text-4xl text-rgreen mb-2"></i>
-                            <span class="font-bold text-xs uppercase tracking-wider text-center">Open Rembert Academy</span>
-                        </a>
                     </div>
 
                     <!-- Actieknoppen -->
@@ -473,6 +474,10 @@
                 document.getElementById('header-step-number').innerText = currentDomain.id;
                 document.getElementById('header-domain-badge').innerText = `Domein ${currentDomain.id} van ${totalSteps}`;
                 document.getElementById('header-domain-title').innerText = currentDomain.name;
+
+                // UPDATE: Dynamische vraag met domein naam erin!
+                document.getElementById('question-a-text').innerHTML = `Hoe beoordeel je je huidige niveau in <strong>${currentDomain.name}</strong>?`;
+                document.getElementById('question-b-text').innerHTML = `Hoe belangrijk is het voor jou om je bij te scholen in <strong>${currentDomain.name}</strong>?`;
 
                 const optionsContainer = document.getElementById('level-options'); optionsContainer.innerHTML = '';
                 const savedLevel = userAnswers[currentStep]?.level || null;
